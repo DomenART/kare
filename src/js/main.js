@@ -32,7 +32,7 @@ $('.js-switcher-slider').each(function() {
     // this.addEventListener('show', function(e) {
     //     console.log(e);
     // });
-    UIkit.util.on('.js-switcher-slider', 'shown', function(e) {
+    UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
         console.log(e);
     //     // clearTimeout(timer);
 
