@@ -20,7 +20,7 @@ $('.js-switcher-slider').each(function() {
     });
     switcher.timer = null;
 
-    switcher.on('show', function(e) {
+    UIkit.util.on(switcher, 'show', function(e) {
         console.log(e);
         // clearTimeout(timer);
 
