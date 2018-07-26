@@ -18,19 +18,8 @@ $('.js-switcher-slider').each(function() {
         animation: 'uk-animation-fade'
     });
     switcher.timer = null;
-    // switcher.$on('show', function(e) {
-    //     console.log(e);
-    //     // clearTimeout(timer);
 
-    //     // timer = setTimeout(() => {
-    //     //     switcher.show('next');
-    //     // }, timeout);
-    // });
-    // this.addEventListener('show', function(e) {
-    //     console.log(e);
-    // });
     UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
-        console.log(e.detail[0]);
         clearTimeout(e.detail[0].timer);
 
         e.detail[0].timer = setTimeout(() => {

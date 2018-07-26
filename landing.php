@@ -143,8 +143,8 @@ $reviews = $query->query([
                                                         <?php foreach ($slider as $key => $tmp): echo '<li uk-switcher-item="' . $key . '"></li>'; endforeach; ?>
                                                     </ul>
                                                     <div class="slider-nav">
-                                                        <button class="slider-nav__previous <?php echo($item['darken'] ? 'slider-nav__previous_light' : '') ?>" uk-switcher-item="next"></button>
-                                                        <button class="slider-nav__next <?php echo($item['darken'] ? 'slider-nav__next_light' : '') ?>" uk-switcher-item="previous"></button>
+                                                        <button class="slider-nav__previous <?php echo($item['darken'] ? 'slider-nav__previous_light' : '') ?>" uk-switcher-item="previous"></button>
+                                                        <button class="slider-nav__next <?php echo($item['darken'] ? 'slider-nav__next_light' : '') ?>" uk-switcher-item="next"></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -324,11 +324,11 @@ $reviews = $query->query([
                                 <div class="reviews-nav js-switcher">
                                     <button
                                         class="reviews-nav__button reviews-nav__button_previous"
-                                        uk-switcher-item="next"
+                                        uk-switcher-item="previous"
                                     ><span uk-icon="icon: arrow-left; ratio: 1.8"></span></button>
                                     <button
                                         class="reviews-nav__button reviews-nav__button_next"
-                                        uk-switcher-item="previous"
+                                        uk-switcher-item="next"
                                     ><span uk-icon="icon: arrow-right; ratio: 1.8"></span></button>
                                 </div>
                             </div>
