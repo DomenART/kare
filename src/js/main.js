@@ -12,7 +12,7 @@ $('.gallery, .lightbox').each(function(){
 });
 
 /** Лайтбокс на галереи **/
-UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
+UIkit.util.on('.js-switcher-slider', 'shown', function(e) {
     clearTimeout(e.detail[0].timer);
 
     e.detail[0].timer = setTimeout(() => {
