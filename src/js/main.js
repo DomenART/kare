@@ -13,14 +13,11 @@ $('.gallery, .lightbox').each(function(){
 
 /** Лайтбокс на галереи **/
 $('.js-switcher-slider').each(function() {
-    const timeout = 8000;
     const switcher = UIkit.switcher(this, {
         connect: '.js-switcher-slider-items',
         animation: 'uk-animation-fade'
     });
     switcher.timer = null;
-
-    console.log(switcher);
     // switcher.$on('show', function(e) {
     //     console.log(e);
     //     // clearTimeout(timer);
@@ -33,12 +30,12 @@ $('.js-switcher-slider').each(function() {
     //     console.log(e);
     // });
     UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
-        console.log(e);
-    //     // clearTimeout(timer);
+        console.log(e.detail[0]);
+        clearTimeout(e.detail[0].timer);
 
-    //     // timer = setTimeout(() => {
-    //     //     switcher.show('next');
-    //     // }, timeout);
+        e.detail[0].timer = setTimeout(() => {
+            e.detail[0].show('next');
+        }, 8000);
     });
 });
 
