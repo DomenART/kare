@@ -29,17 +29,17 @@ $('.js-switcher-slider').each(function() {
     //     //     switcher.show('next');
     //     // }, timeout);
     // });
-    this.addEventListener('show', function(e) {
-        console.log(e);
-    });
-    // UIkit.util.on('.js-switcher-slider', 'show', function(e) {
+    // this.addEventListener('show', function(e) {
     //     console.log(e);
+    // });
+    UIkit.util.on('.js-switcher-slider', 'shown', function(e) {
+        console.log(e);
     //     // clearTimeout(timer);
 
     //     // timer = setTimeout(() => {
     //     //     switcher.show('next');
     //     // }, timeout);
-    // });
+    });
 });
 
 $(window).scroll(function(){
