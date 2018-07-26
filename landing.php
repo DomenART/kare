@@ -93,11 +93,11 @@ $reviews = $query->query([
             </div>
 
             <?php if ($slider = get_field('slider')) : ?>
-                <ul class="uk-hidden js-switcher-slider">
+                <ul class="uk-hidden" uk-switcher="connect: .js-switcher-slider; animation: uk-animation-fade">
                     <?php foreach ($slider as $item): ?><li></li><?php endforeach; ?>
                 </ul>
                 <div class="slider">
-                    <ul class="uk-switcher js-switcher-slider-items">
+                    <ul class="uk-switcher js-switcher-slider">
                         <?php foreach($slider as $item) : ?>
                             <li>
                                 <div
@@ -139,7 +139,7 @@ $reviews = $query->query([
                                             </div>
                                             <div class="uk-width-1-2@m">
                                                 <div class="slider__navigation">
-                                                    <ul class="slider-dotnav js-switcher-slider-items">
+                                                    <ul class="slider-dotnav js-switcher-slider">
                                                         <?php foreach ($slider as $key => $tmp): echo '<li uk-switcher-item="' . $key . '"></li>'; endforeach; ?>
                                                     </ul>
                                                     <div class="slider-nav">

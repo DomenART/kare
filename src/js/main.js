@@ -12,20 +12,12 @@ $('.gallery, .lightbox').each(function(){
 });
 
 /** Лайтбокс на галереи **/
-$('.js-switcher-slider').each(function() {
-    const switcher = UIkit.switcher(this, {
-        connect: '.js-switcher-slider-items',
-        animation: 'uk-animation-fade'
-    });
-    switcher.timer = null;
+UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
+    clearTimeout(e.detail[0].timer);
 
-    UIkit.util.on('.js-switcher-slider-items', 'shown', function(e) {
-        clearTimeout(e.detail[0].timer);
-
-        e.detail[0].timer = setTimeout(() => {
-            e.detail[0].show('next');
-        }, 8000);
-    });
+    e.detail[0].timer = setTimeout(() => {
+        e.detail[0].show('next');
+    }, 8000);
 });
 
 $(window).scroll(function(){
