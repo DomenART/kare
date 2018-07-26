@@ -18,16 +18,15 @@ $('.js-switcher-slider').each(function() {
         connect: '.js-switcher-slider-items',
         animation: 'uk-animation-fade'
     });
+    switcher.timer = null;
 
-    let timer = null;
+    switcher.on('show', function(e) {
+        console.log(e);
+        // clearTimeout(timer);
 
-    UIkit.util.on(this, 'show', () => {
-        console.log(timer, switcher);
-        clearTimeout(timer);
-
-        timer = setTimeout(() => {
-            switcher.show('next');
-        }, timeout);
+        // timer = setTimeout(() => {
+        //     switcher.show('next');
+        // }, timeout);
     });
 });
 
