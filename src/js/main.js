@@ -21,22 +21,25 @@ $('.js-switcher-slider').each(function() {
     switcher.timer = null;
 
     console.log(switcher);
-    switcher.$on('show', function(e) {
-        console.log(e);
-        // clearTimeout(timer);
+    // switcher.$on('show', function(e) {
+    //     console.log(e);
+    //     // clearTimeout(timer);
 
-        // timer = setTimeout(() => {
-        //     switcher.show('next');
-        // }, timeout);
-    });
-    UIkit.util.on('.js-switcher-slider', 'show', function(e) {
+    //     // timer = setTimeout(() => {
+    //     //     switcher.show('next');
+    //     // }, timeout);
+    // });
+    this.addEventListener('show', function(e) {
         console.log(e);
-        // clearTimeout(timer);
-
-        // timer = setTimeout(() => {
-        //     switcher.show('next');
-        // }, timeout);
     });
+    // UIkit.util.on('.js-switcher-slider', 'show', function(e) {
+    //     console.log(e);
+    //     // clearTimeout(timer);
+
+    //     // timer = setTimeout(() => {
+    //     //     switcher.show('next');
+    //     // }, timeout);
+    // });
 });
 
 $(window).scroll(function(){
