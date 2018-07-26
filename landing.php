@@ -93,11 +93,11 @@ $reviews = $query->query([
             </div>
 
             <?php if ($slider = get_field('slider')) : ?>
-                <ul class="uk-hidden" uk-switcher="connect: .js-switcher-slider; animation: uk-animation-fade">
+                <ul class="uk-hidden js-switcher-slider">
                     <?php foreach ($slider as $item): ?><li></li><?php endforeach; ?>
                 </ul>
                 <div class="slider">
-                    <ul class="uk-switcher js-switcher-slider">
+                    <ul class="uk-switcher js-switcher-slider-items">
                         <?php foreach($slider as $item) : ?>
                             <li>
                                 <div
@@ -139,7 +139,7 @@ $reviews = $query->query([
                                             </div>
                                             <div class="uk-width-1-2@m">
                                                 <div class="slider__navigation">
-                                                    <ul class="slider-dotnav js-switcher-slider">
+                                                    <ul class="slider-dotnav js-switcher-slider-items">
                                                         <?php foreach ($slider as $key => $tmp): echo '<li uk-switcher-item="' . $key . '"></li>'; endforeach; ?>
                                                     </ul>
                                                     <div class="slider-nav">
@@ -247,10 +247,10 @@ $reviews = $query->query([
                                     <li>
                                         <?php if ($video = get_field('video', $item->ID)): ?>
                                             <div class="reviews__video uk-cover-container">
-                                                <iframe 
-                                                    src="https://www.youtube.com/embed/<?php echo $video ?>" 
-                                                    frameborder="0" 
-                                                    allow="autoplay; encrypted-media" 
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/<?php echo $video ?>"
+                                                    frameborder="0"
+                                                    allow="autoplay; encrypted-media"
                                                     allowfullscreen
                                                     uk-cover
                                                 ></iframe>
