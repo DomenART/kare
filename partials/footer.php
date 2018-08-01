@@ -13,7 +13,7 @@
 				<?php if ($socials = get_field('socials', 'option')): ?>
                 <div class="footer__socials">
 					<?php foreach ($socials as $social): ?>
-                    	<a href="<?php echo $social['link'] ?>" target="_blank"><span uk-icon="<?php echo $social['key'] ?>"></span></a>
+                    	<a href="<?php echo $social['link'] ?>" target="_blank"><?php echo $social['icon'] ?></a>
 					<?php endforeach; ?>
                 </div>
 				<?php endif; ?>
