@@ -10,9 +10,13 @@
                 <div class="footer__address uk-visible@l">
                     <?php the_field('address', 'option') ?>
                 </div>
+				<?php if ($socials = get_field('socials', 'option')): ?>
                 <div class="footer__socials">
-                    <a href="#"><span uk-icon="instagram"></span></a>
+					<?php foreach ($socials as $social): ?>
+                    	<a href="<?php echo $social['link'] ?>" target="_blank"><span uk-icon="<?php echo $social['key'] ?>"></span></a>
+					<?php endforeach; ?>
                 </div>
+				<?php endif; ?>
                 <div class="footer__phone">
                     <?php the_field('phone', 'option') ?>
                 </div>
