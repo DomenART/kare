@@ -384,16 +384,6 @@ $reviews = $query->query([
                 </div>
             </div>
 
-            <?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
-                <div class="page-content">
-                    <?php the_content(); ?>
-                </div>
-            <?php endwhile; else: ?>
-                <div class="page-content">
-                    <p>Извините, ничего не найдено.</p>
-                </div>
-            <?php endif; ?>
-
             <?php get_template_part( 'partials/footer' ) ?>
         </div>
     </body>
